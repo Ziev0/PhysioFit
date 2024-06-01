@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightPri">#009688</color>
+    <color name="darkPri">#4CAF50</color>
+    <color name="colorPrimary">?attr/colorPrimary</color>
+    <color name="colorPrimaryVariant">?colorPrimaryVariant</color>
+    <color name="colorPrimaryDark">#4CAF50</color>
+    <color name="statusBarColor">?attr/colorOnPrimary</color>
+    <color name="notificationBarColor">?attr/colorOnPrimary</color>
+    <color name="primary_text">?attr/colorOnPrimary</color>
+    <color name="secondary_text">?attr/colorOnPrimary</color>
+
+
+
+</resources>

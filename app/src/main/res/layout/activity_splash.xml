@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_shape"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="PhysioFit"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Get ready to revolutionize your fitness journey with our cutting-edge platforms"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_below="@id/app_name"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/get_started_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Get Started"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:layout_below="@id/tagline"
+        android:layout_marginTop="32dp" />
+</RelativeLayout>

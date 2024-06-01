@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Circle for the head -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,10a10,10 0 1,0 20,0a10,10 0 1,0 -20,0" />
+    <!-- First arm -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,20l20,20"
+        android:strokeWidth="10"
+        android:strokeLineCap="round" />
+    <!-- Second arm -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,20l20,20"
+        android:strokeWidth="10"
+        android:strokeLineCap="round" />
+    <!-- Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,40l20,40"
+        android:strokeWidth="10"
+        android:strokeLineCap="round" />
+    <!-- First leg -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,80l20,20"
+        android:strokeWidth="10"
+        android:strokeLineCap="round" />
+    <!-- Second leg -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,80l20,20"
+        android:strokeWidth="10"
+        android:strokeLineCap="round" />
+</vector>
