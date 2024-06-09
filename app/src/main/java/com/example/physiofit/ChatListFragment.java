@@ -51,7 +51,7 @@ public class ChatListFragment extends Fragment {
             }
         });
 
-        SearchView searchView = view.findViewById(R.id.search_view);
+        SearchView searchView = toolbar.findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
