@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +12,8 @@ import androidx.appcompat.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +29,11 @@ public class ChatListFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        Toolbar toolbar = view.findViewById(R.id.chat_list_toolbar);
+        TextView toolbarTitle = toolbar.findViewById(R.id.title_bar);
+        toolbarTitle.setText("Chats");
+
 
         chatList = new ArrayList<>();
         // Populate chatList with data (this should be replaced with actual data fetching logic)

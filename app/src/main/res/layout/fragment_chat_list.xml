@@ -4,21 +4,15 @@
     android:layout_height="match_parent">
     <include
         android:id="@+id/chat_list_toolbar"
-        layout="@layout/chat_list_toolbar" />
+        layout="@layout/toolbar_layout" />
 
-    <!-- Search Bar -->
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:queryHint="Search" />
 
     <!-- RecyclerView for Chats -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/search_view"
+        android:layout_below="@id/chat_list_toolbar"
         android:padding="8dp" />
 
 </RelativeLayout>
