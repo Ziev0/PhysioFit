@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_background"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/workout_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image2"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/workout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Back On Your Feet"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/workout_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intermediate"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="4dp"/>
+
+        <TextView
+            android:id="@+id/workout_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20 times up a day"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:paddingTop="4dp"/>
+
+        <ProgressBar
+            android:id="@+id/workout_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="45"
+            android:progressTint="@color/lightPri"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:paddingTop="4dp"/>
+    </LinearLayout>
+</LinearLayout>
