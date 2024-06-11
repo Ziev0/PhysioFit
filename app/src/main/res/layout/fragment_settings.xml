@@ -23,7 +23,7 @@
             android:background="@drawable/circle_background"
             android:padding="2dp"
             android:scaleType="centerCrop"/>
-
+<!--
         <TextView
             android:id="@+id/profile_name"
             android:layout_width="wrap_content"
@@ -40,10 +40,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Never give up 💪"
+            android:text="Never give up"
             android:textSize="14sp"
             android:textColor="@color/secondary_text"
-            android:paddingTop="4dp"/>
+            android:paddingTop="4dp"/> -->
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

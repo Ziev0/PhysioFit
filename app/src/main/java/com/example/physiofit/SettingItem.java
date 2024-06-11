@@ -1,18 +1,24 @@
 package com.example.physiofit;
 public class SettingItem {
-    private String name;
-    private int iconResId;
+    private int icon;
+    private String title;
+    private String subtitle;
 
-    public SettingItem(String name, int iconResId) {
-        this.name = name;
-        this.iconResId = iconResId;
+    public SettingItem(int icon, String title, String subtitle) {
+        this.icon = icon;
+        this.title = title;
+        this.subtitle = subtitle;
     }
 
-    public String getName() {
-        return name;
+    public int getIcon() {
+        return icon;
     }
 
-    public int getIconResId() {
-        return iconResId;
+    public String getTitle() {
+        return title;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
     }
 }
