@@ -23,7 +23,6 @@ public class ChatActivity extends AppCompatActivity {
         sendButton = findViewById(R.id.sendButton);
         attachButton = findViewById(R.id.attachButton);
         cameraButton = findViewById(R.id.cameraButton);
-        voiceButton = findViewById(R.id.voiceButton);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // You can set an adapter here to display chat messages

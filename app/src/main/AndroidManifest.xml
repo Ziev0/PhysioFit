@@ -13,20 +13,22 @@
         android:theme="@style/Theme.PhysioFit"
         tools:targetApi="31">
         <activity
+            android:name=".PhysiotherapistActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:exported="true">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />

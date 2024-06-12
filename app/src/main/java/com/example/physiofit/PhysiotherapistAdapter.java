@@ -1,9 +1,12 @@
 package com.example.physiofit;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,10 +15,12 @@ import java.util.List;
 
 public class PhysiotherapistAdapter extends RecyclerView.Adapter<PhysiotherapistAdapter.ViewHolder> {
     private List<Physiotherapist> physiotherapistList;
+    private Context context;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public ImageView profilePicture;
+        public RatingBar rating;
 
         public ViewHolder(View view) {
             super(view);
@@ -24,8 +29,9 @@ public class PhysiotherapistAdapter extends RecyclerView.Adapter<Physiotherapist
         }
     }
 
-    public PhysiotherapistAdapter(List<Physiotherapist> itemList) {
-        this.physiotherapistList = itemList;
+    public PhysiotherapistAdapter(Context context, List<Physiotherapist> physiotherapistList) {
+        this.context = context;
+        this.physiotherapistList = physiotherapistList;
     }
 
     @Override
@@ -39,6 +45,12 @@ public class PhysiotherapistAdapter extends RecyclerView.Adapter<Physiotherapist
         Physiotherapist physiotherapist = physiotherapistList.get(position);
         holder.name.setText(physiotherapist.getName());
         holder.profilePicture.setImageResource(physiotherapist.getProfilePicture());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, PhysiotherapistActivity.class);
+            intent.putExtra("physiotherapist", physiotherapist);
+            context.startActivity(intent);
+        });
     }
 
     @Override

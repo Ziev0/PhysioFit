@@ -68,12 +68,12 @@ public class HomeFragment extends Fragment {
 
         List<Physiotherapist> physiotherapistList = new ArrayList<>();
         // Populate your physiotherapistList here
-        physiotherapistList.add(new Physiotherapist(R.drawable.image4, "Dr. John Doe", 4.5f));
-        physiotherapistList.add(new Physiotherapist(R.drawable.image5, "Dr. Jane Smith", 4.0f));
+        physiotherapistList.add(new Physiotherapist(R.drawable.image4, "Dr. John Doe","Orthopedics", 4.5f));
+        physiotherapistList.add(new Physiotherapist(R.drawable.image5, "Dr. Jane Smith","Geriatric", 4.0f));
         // Add more items as needed
 
 
-        PhysiotherapistAdapter adapter = new PhysiotherapistAdapter(physiotherapistList);
+        PhysiotherapistAdapter adapter = new PhysiotherapistAdapter(requireContext(), physiotherapistList);
         physiotherapistRV.setAdapter(adapter);
     }
 }
