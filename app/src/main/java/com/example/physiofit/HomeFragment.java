@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,7 +41,7 @@ public class HomeFragment extends Fragment {
             ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         }
 
-        // Initialize the RecyclerView
+        // First RecyclerView
         RecyclerView recyclerViewHorizontal = view.findViewById(R.id.recyclerViewPopularExercises);
         recyclerViewHorizontal.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
@@ -50,14 +51,29 @@ public class HomeFragment extends Fragment {
         NewWorkoutAdapter newAdapter = new NewWorkoutAdapter(newWorkoutCards, getActivity());
         recyclerViewHorizontal.setAdapter(newAdapter);
 
+        //Second RecyclerView
         RecyclerView recyclerViewVertical = view.findViewById(R.id.recommendationRecyclerView);
         recyclerViewVertical.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Workout> workoutList = new ArrayList<>();
-        // Add your workout data here
         workoutList.add(new Workout(R.drawable.image2, "Get Back On Your Feet", "Intermediate", "20 times up a day", 45, "Workout details here"));
 
         WorkoutCardAdapter cardsAdapter = new WorkoutCardAdapter(workoutList, getActivity());
         recyclerViewVertical.setAdapter(cardsAdapter);
+
+        //Third RecyclerView
+        RecyclerView physiotherapistRV = view.findViewById(R.id.physiotherapist_recycler_view);
+        int numberOfColumns = 2; // Number of columns in each row
+        physiotherapistRV.setLayoutManager(new GridLayoutManager(getContext(), numberOfColumns));
+
+        List<Physiotherapist> physiotherapistList = new ArrayList<>();
+        // Populate your physiotherapistList here
+        physiotherapistList.add(new Physiotherapist(R.drawable.image4, "Dr. John Doe", 4.5f));
+        physiotherapistList.add(new Physiotherapist(R.drawable.image5, "Dr. Jane Smith", 4.0f));
+        // Add more items as needed
+
+
+        PhysiotherapistAdapter adapter = new PhysiotherapistAdapter(physiotherapistList);
+        physiotherapistRV.setAdapter(adapter);
     }
 }
