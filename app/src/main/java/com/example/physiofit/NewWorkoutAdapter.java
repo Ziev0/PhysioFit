@@ -1,11 +1,10 @@
 package com.example.physiofit;
-
+import com.bumptech.glide.Glide;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,13 +29,17 @@ public class NewWorkoutAdapter extends RecyclerView.Adapter<NewWorkoutAdapter.Wo
     @Override
     public void onBindViewHolder(@NonNull WorkoutCardSimpleViewHolder holder, int position) {
         Workout workout = workoutList.get(position);
-        holder.workoutImage.setImageResource(workout.getImageResId());
         holder.workoutTitle.setText(workout.getName());
         holder.workoutDuration.setText(workout.getDescription());
 
-        // Set the onClick listener
+        // Load image using Glide
+        Glide.with(holder.workoutImage.getContext())
+                .load(workout.getImageResId())
+                .placeholder(R.drawable.placeholder) // Placeholder image
+                .error(R.drawable.error) // Error image
+                .into(holder.workoutImage);
+
         holder.itemView.setOnClickListener(v -> {
-            // Handle item click
             WorkoutDetailsFragment fragment = WorkoutDetailsFragment.newInstance(workout);
             activity.getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, fragment)

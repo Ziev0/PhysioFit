@@ -1,16 +1,13 @@
 package com.example.physiofit;
-
+import com.bumptech.glide.Glide;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class PhysiotherapistAdapter extends RecyclerView.Adapter<PhysiotherapistAdapter.ViewHolder> {
@@ -20,7 +17,6 @@ public class PhysiotherapistAdapter extends RecyclerView.Adapter<Physiotherapist
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public ImageView profilePicture;
-        public RatingBar rating;
 
         public ViewHolder(View view) {
             super(view);
@@ -44,7 +40,13 @@ public class PhysiotherapistAdapter extends RecyclerView.Adapter<Physiotherapist
     public void onBindViewHolder(ViewHolder holder, int position) {
         Physiotherapist physiotherapist = physiotherapistList.get(position);
         holder.name.setText(physiotherapist.getName());
-        holder.profilePicture.setImageResource(physiotherapist.getProfilePicture());
+
+        // Load image using Glide
+        Glide.with(holder.profilePicture.getContext())
+                .load(physiotherapist.getProfilePicture())
+                .placeholder(R.drawable.placeholder) // Placeholder image
+                .error(R.drawable.error) // Error image
+                .into(holder.profilePicture);
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, PhysiotherapistActivity.class);

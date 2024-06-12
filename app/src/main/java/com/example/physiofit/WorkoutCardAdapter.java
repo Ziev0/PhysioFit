@@ -1,5 +1,5 @@
 package com.example.physiofit;
-
+import com.bumptech.glide.Glide;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,11 +27,17 @@ public class WorkoutCardAdapter extends RecyclerView.Adapter<WorkoutCardViewHold
     @Override
     public void onBindViewHolder(@NonNull WorkoutCardViewHolder holder, int position) {
         Workout workout = workoutList.get(position);
-        holder.workoutImage.setImageResource(workout.getImageResId());
         holder.workoutName.setText(workout.getName());
         holder.workoutLevel.setText(workout.getLevel());
         holder.workoutDescription.setText(workout.getDescription());
         holder.workoutProgress.setProgress(workout.getProgress());
+
+        // Load image using Glide
+        Glide.with(holder.workoutImage.getContext())
+                .load(workout.getImageResId())
+                .placeholder(R.drawable.placeholder) // Placeholder image
+                .error(R.drawable.error) // Error image
+                .into(holder.workoutImage);
 
         holder.itemView.setOnClickListener(v -> {
             WorkoutDetailsFragment fragment = WorkoutDetailsFragment.newInstance(workout);
