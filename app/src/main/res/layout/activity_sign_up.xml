@@ -38,13 +38,14 @@
             android:layout_marginTop="32dp"
             android:textColor="?attr/colorAccent" />
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ahmed Naveed"
             android:background="@drawable/rounded_edittext"
             android:padding="12dp"
             android:layout_marginTop="8dp"
-            android:textColor="?attr/colorOnPrimary" />
+            android:textColor="?attr/colorAccent" />
 
         <!-- Email Address Input -->
         <TextView
@@ -54,6 +55,7 @@
             android:layout_marginTop="16dp"
             android:textColor="?attr/colorAccent" />
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ahmednaveed934@gmail.com"
@@ -71,6 +73,7 @@
             android:layout_marginTop="16dp"
             android:textColor="?attr/colorAccent" />
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="**********"
@@ -131,6 +134,7 @@
 -->
         <!-- Login Link -->
         <TextView
+            android:id="@+id/signin_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account? Login."

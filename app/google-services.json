@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "482732472448",
+    "project_id": "physiofit-ziev",
+    "storage_bucket": "physiofit-ziev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482732472448:android:8882b008f21da6ce610e65",
+        "android_client_info": {
+          "package_name": "com.example.physiofit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLHO6UOZtdTIcBsnrWdzASl5mkb_rKrI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
